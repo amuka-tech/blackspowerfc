@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blacks Power FC Official Website
 
-## Getting Started
+![Blacks Power FC Logo](public/logo.png)
 
-First, run the development server:
+Welcome to the official repository for the **Blacks Power FC** website! Blacks Power FC are the reigning 2025/2026 FUFA Big League Champions and are looking forward to a great season in the Uganda Premier League.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is a modern web application built with **Next.js**, **React**, **Tailwind CSS**, and **Framer Motion**. It serves as the digital home for Blacks Power FC, showcasing:
+- Club news and updates
+- The official first team squad and coaching staff
+- Match fixtures and results
+- Information for fans and partners
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Technology Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js (App Router)](https://nextjs.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **UI Components**: Custom components built with `Radix UI` and `class-variance-authority` (shadcn/ui inspired)
 
-## Learn More
+## 📦 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+First, make sure you have Node.js installed on your machine.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository and navigate to the project directory:
+   ```bash
+   git clone <repository-url>
+   cd blackspower
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📂 Project Structure
+
+- `/app`: Contains the Next.js App Router pages (Home, Team, Fixtures, etc.) and layouts.
+- `/components`: Reusable React components (UI elements, Player Cards, News Cards, Navbar, Footer).
+- `/public`: Static assets including images and the club logo.
+- `/lib`: Utility functions and configuration files.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute to the project.
+
+## 🏆 Unity is Power
+
+*EST 2006*
