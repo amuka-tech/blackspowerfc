@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { imgPath } from '@/lib/imgPath';
 
 interface NewsCardProps {
+  id?: string;
   title: string;
   excerpt: string;
   category: string;
@@ -11,9 +12,13 @@ interface NewsCardProps {
   date: string;
 }
 
-export function NewsCard({ title, excerpt, category, imageUrl, date }: NewsCardProps) {
+export function NewsCard({ id, title, excerpt, category, imageUrl, date }: NewsCardProps) {
+  // Generate fallback slug if id is missing
+  const targetId = id || title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const href = `/news/${targetId}`;
+
   return (
-    <Link href="#" className="group block bg-brand-gray rounded-xl overflow-hidden border border-gray-800 hover:border-brand-red/50 transition-all">
+    <Link href={href} className="group block bg-brand-gray rounded-xl overflow-hidden border border-gray-800 hover:border-brand-red/50 transition-all">
       <div className="relative h-48 w-full overflow-hidden">
         <Image 
           src={imgPath(imageUrl)} 

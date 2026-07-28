@@ -5,36 +5,46 @@ import { PlayerCard } from '@/components/PlayerCard';
 export default function TeamPage() {
   const [activeTab, setActiveTab] = useState('first-team');
 
-  const players = [
-    { number: 1, name: "Acire", position: "Player" },
-    { number: 2, name: "Andrea", position: "Player" },
-    { number: 3, name: "Buyala", position: "Player" },
-    { number: 4, name: "Fazil", position: "Player" },
-    { number: 5, name: "Kirya", position: "Player" },
-    { number: 6, name: "Maduka", position: "Player" },
-    { number: 7, name: "Odongkara", position: "Player" },
-    { number: 8, name: "Okech", position: "Player" },
-    { number: 9, name: "Okello", position: "Player" },
-    { number: 10, name: "Okiria", position: "Player" },
-    { number: 11, name: "Olello", position: "Player" },
-    { number: 12, name: "Oloro", position: "Player" },
-    { number: 13, name: "Omara", position: "Player" },
-    { number: 14, name: "Oonyu", position: "Player" },
-    { number: 15, name: "Opio", position: "Player" },
-    { number: 16, name: "Oscar", position: "Player" },
-    { number: 17, name: "Owiny", position: "Player" },
-    { number: 18, name: "Pascal", position: "Player" },
-    { number: 19, name: "Ssenkooto", position: "Player" },
-    { number: 20, name: "Wabulo", position: "Player" },
-    { number: 21, name: "Yakin", position: "Player" },
-    { number: 22, name: "Ogwal", position: "Player" },
+  const goalkeepers = [
+    { number: 1, name: "Micheal Okiria", position: "Goalkeeper" },
+    { number: 19, name: "Martin Ssenkoto Kalanda", position: "Goalkeeper" },
+    { number: 22, name: "Emmanuel Odongkara", position: "Goalkeeper" },
   ];
 
-  const coaches = [
-    { number: 0, name: "Michael Lukyamuzi Skills", position: "Head Coach" },
+  const defenders = [
+    { number: 2, name: "Henry Orom", position: "Defender" },
+    { number: 3, name: "Daniel Otim", position: "Defender" },
+    { number: 4, name: "Ivan Okello", position: "Defender" },
+    { number: 5, name: "Brian Ogwal", position: "Defender" },
+    { number: 6, name: "Ronald Owiny Ogenga", position: "Defender" },
+    { number: 15, name: "Pascal Irana", position: "Defender" },
+    { number: 18, name: "John Paul Acire", position: "Defender" },
+    { number: 24, name: "Isaac Okello", position: "Defender" },
+    { number: 25, name: "Rajab Fazil", position: "Defender" },
   ];
 
-  const displayList = activeTab === 'first-team' ? players : activeTab === 'coaching-staff' ? coaches : [];
+  const midfielders = [
+    { number: 8, name: "Rashid Yakin", position: "Midfielder" },
+    { number: 13, name: "Simon Misaki Opio", position: "Midfielder" },
+    { number: 17, name: "Micheal Siwu", position: "Midfielder" },
+    { number: 25, name: "Kakomo Amir", position: "Midfielder" },
+    { number: 27, name: "Collins Alinaitwe", position: "Midfielder" },
+    { number: 31, name: "Joshua Omara", position: "Midfielder" },
+    { number: 32, name: "Andrea Ogwal", position: "Midfielder" },
+    { number: 33, name: "Gerald Ronald Kirya", position: "Midfielder" },
+  ];
+
+  const forwards = [
+    { number: 7, name: "Emmanuel Wabulo", position: "Forward" },
+    { number: 10, name: "Innocent Maduka", position: "Forward" },
+    { number: 12, name: "Baker Buyala", position: "Forward" },
+    { number: 14, name: "Nathan Oloro", position: "Forward" },
+    { number: 16, name: "Steven Kabuye", position: "Forward" },
+    { number: 20, name: "Paul Elias Oonyu", position: "Forward" },
+    { number: 21, name: "Emmanuel Janan Okech", position: "Forward" },
+    { number: 23, name: "Oscar Richard Otim", position: "Forward" },
+    { number: 28, name: "Amutuhaire Isaac", position: "Forward" },
+  ];
 
   return (
     <div className="bg-brand-dark min-h-screen">
@@ -66,18 +76,76 @@ export default function TeamPage() {
             Coaching Staff
           </button>
           <button 
-            onClick={() => setActiveTab('academy')}
-            className={`px-6 py-2 font-heading uppercase tracking-wider text-sm font-bold rounded-sm whitespace-nowrap transition-colors ${activeTab === 'academy' ? 'bg-brand-red text-white' : 'bg-brand-gray text-gray-400 hover:text-white'}`}
+            onClick={() => setActiveTab('womens-team')}
+            className={`px-6 py-2 font-heading uppercase tracking-wider text-sm font-bold rounded-sm whitespace-nowrap transition-colors ${activeTab === 'womens-team' ? 'bg-brand-red text-white' : 'bg-brand-gray text-gray-400 hover:text-white'}`}
           >
-            Academy
+            Women's Team
+          </button>
+          <button 
+            onClick={() => setActiveTab('junior-team')}
+            className={`px-6 py-2 font-heading uppercase tracking-wider text-sm font-bold rounded-sm whitespace-nowrap transition-colors ${activeTab === 'junior-team' ? 'bg-brand-red text-white' : 'bg-brand-gray text-gray-400 hover:text-white'}`}
+          >
+            Junior/Academy Team
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {displayList.map((person) => (
-            <PlayerCard key={person.number} {...person} />
-          ))}
-        </div>
+        {activeTab === 'first-team' && (
+          <div className="space-y-16">
+            <div>
+              <h2 className="text-3xl font-heading font-bold uppercase tracking-tight text-white mb-6 border-b border-gray-800 pb-2">Goalkeepers</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {goalkeepers.map((person) => (
+                  <PlayerCard key={person.number} {...person} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-heading font-bold uppercase tracking-tight text-white mb-6 border-b border-gray-800 pb-2">Defenders</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {defenders.map((person) => (
+                  <PlayerCard key={person.number} {...person} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-heading font-bold uppercase tracking-tight text-white mb-6 border-b border-gray-800 pb-2">Midfielders</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {midfielders.map((person) => (
+                  <PlayerCard key={person.number} {...person} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-heading font-bold uppercase tracking-tight text-white mb-6 border-b border-gray-800 pb-2">Forwards</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {forwards.map((person) => (
+                  <PlayerCard key={person.number} {...person} />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'coaching-staff' && (
+          <div className="flex flex-col items-center justify-center py-20 text-center">
+            <h3 className="text-2xl font-heading uppercase text-gray-400 mb-4">Coaching Staff</h3>
+            <p className="text-gray-500 max-w-md">The new coaching staff will be officially unveiled soon. Stay tuned for updates.</p>
+          </div>
+        )}
+
+        {activeTab === 'womens-team' && (
+          <div className="flex flex-col items-center justify-center py-20 text-center">
+            <h3 className="text-2xl font-heading uppercase text-gray-400 mb-4">Lira City Queens FC</h3>
+            <p className="text-gray-500 max-w-md">Our Women's Team will be officially unveiled soon. Stay tuned for updates.</p>
+          </div>
+        )}
+
+        {activeTab === 'junior-team' && (
+          <div className="flex flex-col items-center justify-center py-20 text-center">
+            <h3 className="text-2xl font-heading uppercase text-gray-400 mb-4">Junior / Academy Team</h3>
+            <p className="text-gray-500 max-w-md">The Junior and Academy Team squads will be officially unveiled soon. Stay tuned for updates.</p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -7,30 +7,10 @@ import { Button } from '@/components/ui/button';
 import { NewsCard } from '@/components/NewsCard';
 import { imgPath } from '@/lib/imgPath';
 
+import { newsData } from '@/lib/newsData';
+
 export default function Home() {
-  const news = [
-    {
-      title: "Warriors Secure Promotion to Uganda Premier League",
-      excerpt: "It's official! Blacks Power FC will play in the top tier next season after a hard-fought victory...",
-      category: "Match Report",
-      imageUrl: "/images/celebration.jpg",
-      date: "May 15, 2026"
-    },
-    {
-      title: "Lukyamuzi Skills Extends Contract",
-      excerpt: "The master tactician who led us to Big League glory has committed his future to the club...",
-      category: "Club News",
-      imageUrl: "/images/presentation.jpg",
-      date: "May 20, 2026"
-    },
-    {
-      title: "Akiibua Stadium Renovations Underway",
-      excerpt: "As part of the AFCON 2027 preparations, our home ground is receiving a major facelift...",
-      category: "Stadium",
-      imageUrl: "https://placehold.co/600x400/D21022/FFFFFF?text=Stadium+Upgrade",
-      date: "May 25, 2026"
-    }
-  ];
+  const news = newsData.slice(0, 3);
 
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
@@ -131,6 +111,33 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Last Season Results Section */}
+      <section className="relative z-40 max-w-7xl mx-auto px-4 w-full mb-24">
+        <div className="bg-brand-gray p-1 rounded-xl shadow-2xl shadow-black/50 border border-gray-800">
+          <div className="flex flex-col p-6 bg-black rounded-lg">
+            <h3 className="font-heading text-xl text-brand-red uppercase tracking-wider mb-4 text-center">Last Season's Results (2024/2025)</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="p-4 bg-brand-dark rounded border border-gray-800">
+                <div className="text-3xl font-heading font-bold text-white mb-1">1st</div>
+                <div className="text-gray-400 text-sm uppercase">Position</div>
+              </div>
+              <div className="p-4 bg-brand-dark rounded border border-gray-800">
+                <div className="text-3xl font-heading font-bold text-white mb-1">30</div>
+                <div className="text-gray-400 text-sm uppercase">Matches Played</div>
+              </div>
+              <div className="p-4 bg-brand-dark rounded border border-gray-800">
+                <div className="text-3xl font-heading font-bold text-white mb-1">18</div>
+                <div className="text-gray-400 text-sm uppercase">Wins</div>
+              </div>
+              <div className="p-4 bg-brand-dark rounded border border-gray-800">
+                <div className="text-3xl font-heading font-bold text-white mb-1">59</div>
+                <div className="text-gray-400 text-sm uppercase">Points</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Latest News */}
       <section className="py-16 bg-brand-dark max-w-7xl mx-auto px-4 w-full overflow-hidden">
         <motion.div 
@@ -172,10 +179,13 @@ export default function Home() {
       {/* Sponsors Ticker */}
       <section className="py-12 border-t border-b border-gray-800 bg-[#050505] overflow-hidden mt-12 mb-12">
         <div className="max-w-7xl mx-auto px-4">
+          <p className="text-center text-gray-500 font-heading tracking-widest uppercase text-sm mb-8">Principal Sponsor</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 mb-12">
+            <span className="font-heading text-3xl md:text-4xl font-bold uppercase text-brand-red">Mount Meru Millers Uganda Limited</span>
+          </div>
+          
           <p className="text-center text-gray-500 font-heading tracking-widest uppercase text-sm mb-8">Official Partners</p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60">
-            <span className="font-heading text-2xl font-bold uppercase">Mount Meru Millers</span>
-            <span className="font-heading text-2xl font-bold uppercase">Lira City Council</span>
             <span className="font-heading text-2xl font-bold uppercase">FUFA</span>
             <span className="font-heading text-2xl font-bold uppercase">StarTimes</span>
           </div>
