@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, MapPin, Ticket, CheckCircle, ChevronRight, Users, Shield, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { imgPath } from '@/lib/imgPath';
 
 const matches = [
   {
@@ -125,7 +126,10 @@ export default function TicketsPage() {
     <div className="bg-brand-dark min-h-screen">
       {/* Hero Header */}
       <div className="relative bg-brand-gray border-b border-brand-red pt-32 pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('/logo.png')] bg-no-repeat bg-right bg-contain" />
+        <div 
+          className="absolute inset-0 opacity-[0.03] bg-no-repeat bg-right bg-contain" 
+          style={{ backgroundImage: `url('${imgPath("/logo.png")}')` }}
+        />
         {/* Decorative diagonal */}
         <div className="absolute bottom-0 right-0 w-96 h-full bg-brand-red/5 -skew-x-12" />
         <div className="max-w-7xl mx-auto relative z-10">

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ShoppingCart, X, Plus, Minus, Trash2 } from 'lucide-react';
 import { useCart } from '@/lib/CartContext';
 import { Button } from '@/components/ui/button';
+import { imgPath } from '@/lib/imgPath';
 
 export function CartDrawer() {
   const [open, setOpen] = useState(false);
@@ -54,10 +55,10 @@ export function CartDrawer() {
             </div>
           ) : (
             items.map(item => (
-              <div key={`${item.id}-${item.size}`} className="flex gap-4 bg-black rounded-xl p-4 border border-gray-800">
+              <div key={`${item.id}-${item.size}`} className="flex gap-4 border-b border-gray-800 pb-4">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded-lg" />
-                <div className="flex-1 min-w-0">
+                <img src={imgPath(item.image)} alt={item.name} className="w-20 h-20 object-cover rounded-lg" />
+                <div className="flex-1 flex flex-col">
                   <h4 className="font-heading font-bold text-sm uppercase truncate">{item.name}</h4>
                   <p className="text-xs text-gray-400 mt-0.5">Size: <span className="text-white">{item.size}</span></p>
                   <p className="text-brand-red font-heading font-bold mt-1">UGX {(item.price * item.quantity).toLocaleString()}</p>

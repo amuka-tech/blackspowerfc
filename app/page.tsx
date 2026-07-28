@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { NewsCard } from '@/components/NewsCard';
+import { imgPath } from '@/lib/imgPath';
 
 export default function Home() {
   const news = [
@@ -12,21 +13,21 @@ export default function Home() {
       title: "Warriors Secure Promotion to Uganda Premier League",
       excerpt: "It's official! Blacks Power FC will play in the top tier next season after a hard-fought victory...",
       category: "Match Report",
-      imageUrl: "/images/celebration.jpg",
+      imageUrl: imgPath("/images/celebration.jpg"),
       date: "May 15, 2026"
     },
     {
       title: "Lukyamuzi Skills Extends Contract",
       excerpt: "The master tactician who led us to Big League glory has committed his future to the club...",
       category: "Club News",
-      imageUrl: "/images/presentation.jpg",
+      imageUrl: imgPath("/images/presentation.jpg"),
       date: "May 20, 2026"
     },
     {
       title: "Akiibua Stadium Renovations Underway",
       excerpt: "As part of the AFCON 2027 preparations, our home ground is receiving a major facelift...",
       category: "Stadium",
-      imageUrl: "https://placehold.co/600x400/D21022/FFFFFF?text=Stadium+Upgrade",
+      imageUrl: imgPath("https://placehold.co/600x400/D21022/FFFFFF?text=Stadium+Upgrade"),
       date: "May 25, 2026"
     }
   ];
@@ -43,7 +44,7 @@ export default function Home() {
         {/* Background */}
         <div className="absolute inset-0 bg-brand-dark">
           <Image 
-            src="/images/celebration.jpg" 
+            src={imgPath("/images/celebration.jpg")}
             alt="Hero Background" 
             fill
             className="object-cover object-top"

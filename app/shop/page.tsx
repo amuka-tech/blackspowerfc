@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ShoppingCart, Star, Filter } from 'lucide-react';
 import { useCart } from '@/lib/CartContext';
 import { Button } from '@/components/ui/button';
+import { imgPath } from '@/lib/imgPath';
 
 const products = [
   {
@@ -12,7 +13,7 @@ const products = [
     price: 85000,
     badge: "Best Seller",
     badgeColor: "bg-accent-gold text-black",
-    image: "/images/lineup.jpg",
+    image: imgPath("/images/lineup.jpg"),
     sizes: ["S", "M", "L", "XL", "XXL"],
     description: "The official Blacks Power FC home kit worn by the 2025/26 FUFA Big League Champions.",
     rating: 5,
@@ -218,7 +219,7 @@ export default function ShopPage() {
       <div className="relative bg-brand-gray border-b border-brand-red pt-32 pb-16 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="" className="w-96 h-96 absolute -right-20 -top-10 object-contain" />
+          <img src={imgPath("/logo.png")} alt="" className="w-96 h-96 absolute -right-20 -top-10 object-contain" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <p className="text-brand-red font-heading tracking-widest uppercase text-sm mb-2">Official Merchandise</p>
