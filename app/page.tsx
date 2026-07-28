@@ -13,21 +13,21 @@ export default function Home() {
       title: "Warriors Secure Promotion to Uganda Premier League",
       excerpt: "It's official! Blacks Power FC will play in the top tier next season after a hard-fought victory...",
       category: "Match Report",
-      imageUrl: imgPath("/images/celebration.jpg"),
+      imageUrl: "/images/celebration.jpg",
       date: "May 15, 2026"
     },
     {
       title: "Lukyamuzi Skills Extends Contract",
       excerpt: "The master tactician who led us to Big League glory has committed his future to the club...",
       category: "Club News",
-      imageUrl: imgPath("/images/presentation.jpg"),
+      imageUrl: "/images/presentation.jpg",
       date: "May 20, 2026"
     },
     {
       title: "Akiibua Stadium Renovations Underway",
       excerpt: "As part of the AFCON 2027 preparations, our home ground is receiving a major facelift...",
       category: "Stadium",
-      imageUrl: imgPath("https://placehold.co/600x400/D21022/FFFFFF?text=Stadium+Upgrade"),
+      imageUrl: "https://placehold.co/600x400/D21022/FFFFFF?text=Stadium+Upgrade",
       date: "May 25, 2026"
     }
   ];
