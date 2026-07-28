@@ -67,12 +67,16 @@ export default function Home() {
               THE BLACK <br/><span className="text-brand-red">WARRIORS</span>
             </h1>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="solidRed" size="lg" className="uppercase w-full sm:w-auto">
-                Join the Warriors
-              </Button>
-              <Button variant="outline" size="lg" className="uppercase w-full sm:w-auto">
-                View Fixtures
-              </Button>
+              <Link href="/tickets">
+                <Button variant="solidRed" size="lg" className="uppercase w-full sm:w-auto">
+                  Buy Tickets
+                </Button>
+              </Link>
+              <Link href="/fixtures">
+                <Button variant="outline" size="lg" className="uppercase w-full sm:w-auto">
+                  View Fixtures
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -118,7 +122,9 @@ export default function Home() {
             </div>
 
             <div className="flex-1 text-center md:text-right">
-              <Button variant="solidRed" className="uppercase tracking-wider w-full md:w-auto">Buy Tickets</Button>
+              <Link href="/tickets">
+                <Button variant="solidRed" className="uppercase tracking-wider w-full md:w-auto">Buy Tickets</Button>
+              </Link>
             </div>
           </div>
         </motion.div>

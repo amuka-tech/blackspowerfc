@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Calendar, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -104,9 +105,11 @@ export function MatchCard({
             <MapPin size={14} className="text-brand-red" />
             <span>{stadium}</span>
           </div>
-          <Button variant="outline" size="sm" className="font-heading uppercase tracking-wider text-xs">
-            Match Center
-          </Button>
+          <Link href="/tickets">
+            <Button variant="solidRed" size="sm" className="font-heading uppercase tracking-wider text-xs">
+              Buy Tickets
+            </Button>
+          </Link>
         </div>
       )}
     </div>

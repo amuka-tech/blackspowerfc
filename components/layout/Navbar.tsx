@@ -25,6 +25,7 @@ export function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'Team', href: '/team' },
     { name: 'Fixtures', href: '/fixtures' },
+    { name: 'Tickets', href: '/tickets' },
     { name: 'News', href: '/news' },
     { name: 'Shop', href: '/shop' },
   ];
@@ -62,7 +63,9 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-3">
           <CartDrawer />
-          <Button variant="solidRed" className="uppercase">Buy Tickets</Button>
+          <Link href="/tickets">
+            <Button variant="solidRed" className="uppercase">Buy Tickets</Button>
+          </Link>
         </div>
 
         {/* Mobile: cart + hamburger */}
@@ -94,7 +97,9 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button variant="solidRed" className="uppercase mt-4 w-3/4">Buy Tickets</Button>
+            <Link href="/tickets" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button variant="solidRed" className="uppercase mt-4 w-3/4">Buy Tickets</Button>
+            </Link>
           </nav>
         </div>
       )}
