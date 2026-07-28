@@ -26,7 +26,6 @@ export function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'Team', href: '/team' },
     { name: 'Fixtures', href: '/fixtures' },
-    { name: 'Tickets', href: '/tickets' },
     { name: 'News', href: '/news' },
     { name: 'Shop', href: '/shop' },
   ];
