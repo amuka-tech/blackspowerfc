@@ -10,6 +10,12 @@ interface NewsDetailPageProps {
   params: Promise<{ id: string }>;
 }
 
+export async function generateStaticParams() {
+  return newsData.map((item) => ({
+    id: item.id,
+  }));
+}
+
 export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   const { id } = await params;
 
