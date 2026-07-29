@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { imgPath } from '@/lib/imgPath';
+
 
 interface NewsCardProps {
   id?: string;
@@ -21,7 +21,7 @@ export function NewsCard({ id, title, excerpt, category, imageUrl, date }: NewsC
     <Link href={href} className="group block bg-brand-gray rounded-xl overflow-hidden border border-gray-800 hover:border-brand-red/50 transition-all">
       <div className="relative h-48 w-full overflow-hidden">
         <Image 
-          src={imgPath(imageUrl)} 
+          src={imageUrl} 
           alt={title} 
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"

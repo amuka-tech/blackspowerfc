@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { CartDrawer } from '@/components/CartDrawer';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import { imgPath } from '@/lib/imgPath';
+
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +39,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src={imgPath("/logo.png")} alt="Blacks Power FC Logo" width={48} height={48} className="object-contain" />
+          <Image src="/logo.png" alt="Blacks Power FC Logo" width={48} height={48} className="object-contain" />
           <span className="font-heading text-2xl font-bold tracking-wider text-brand-light hidden sm:block">
             BLACKS POWER FC
           </span>

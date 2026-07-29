@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { NewsCard } from '@/components/NewsCard';
-import { imgPath } from '@/lib/imgPath';
+
 
 import { newsData } from '@/lib/newsData';
 
@@ -24,7 +24,7 @@ export default function Home() {
         {/* Background */}
         <div className="absolute inset-0 bg-brand-dark">
           <Image 
-            src={imgPath("/images/celebration.jpg")}
+            src="/images/celebration.jpg"
             alt="Hero Background" 
             fill
             className="object-cover object-top"

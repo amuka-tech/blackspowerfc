@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ChampionBadge } from '@/components/ChampionBadge';
-import { imgPath } from '@/lib/imgPath';
+
 
 export function Footer() {
   return (
@@ -15,7 +15,7 @@ export function Footer() {
           {/* Club Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <Image src={imgPath("/logo.png")} alt="Blacks Power FC Logo" width={56} height={56} className="object-contain" />
+              <Image src="/logo.png" alt="Blacks Power FC Logo" width={56} height={56} className="object-contain" />
               <span className="font-heading text-2xl font-bold tracking-wider text-brand-light">
                 BLACKS POWER FC
               </span>

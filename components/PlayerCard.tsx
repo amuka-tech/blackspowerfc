@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { imgPath } from '@/lib/imgPath';
+
 
 interface PlayerCardProps {
   number: number;
@@ -19,7 +19,7 @@ export function PlayerCard({ number, name, position, imageUrl, apps = 0, goals =
       {/* Player Image area with slant */}
       <div className="relative h-[300px] w-full overflow-hidden bg-black">
         <Image 
-          src={imgPath(imageUrl || defaultImage)} 
+          src={imageUrl || defaultImage} 
           alt={name} 
           fill
           className="object-cover object-top transition-transform duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100"

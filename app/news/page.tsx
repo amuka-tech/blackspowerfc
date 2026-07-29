@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { NewsCard } from '@/components/NewsCard';
-import { imgPath } from '@/lib/imgPath';
+
 import { newsData } from '@/lib/newsData';
 
 export default function NewsPage() {
@@ -26,7 +26,7 @@ export default function NewsPage() {
           <div className="relative h-80 md:h-[420px] w-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={imgPath(featured.imageUrl)}
+              src={featured.imageUrl}
               alt={featured.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
